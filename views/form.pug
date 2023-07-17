@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= "Message Board"
+  p Add a new message
+  
+  main
+    section.form-container 
+        form(method='POST' action='/new')
+            input(type='text', placeholder='Username' name='username' id='username')
+            textarea(name='description' placeholder='Pineapples belong on pizza and nobody can tell me otherwise!' cols='50' )
+            button(type='submit' id='submit-btn')= 'post'
+
+
